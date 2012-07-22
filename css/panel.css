@@ -1,0 +1,81 @@
+.pane-toggler-down span {
+    background: url("../images/ddn.png") no-repeat scroll 5px 50% transparent;
+    padding-left: 20px;
+    font-size:0.8em;
+}
+.pane-toggler-up span {
+    background: url("../images/uup.png") no-repeat scroll 5px 50% transparent;
+    padding-left: 20px;
+    font-size:0.8em;
+}
+.panel {
+    border: 1px solid #CCCCCC;
+    margin-bottom: 3px;
+    padding: 2px 0px 10px;
+}
+.panel h3 {
+    background: none repeat scroll 0 0 #FAFAFA;
+    color: #666666;
+    margin:0;
+    cursor: pointer;
+    height:24px;
+}
+.pnlcontent {
+    background: none repeat scroll 0 0 #FFFFFF;
+     border-bottom: medium none;
+    border-top: medium none;    
+    overflow: hidden;
+    padding:0 10px;
+}
+.toolbar{
+    background-color: #F4F4F4;
+    padding: 6px 6px;
+}
+.pnlBtn{
+    background-color: #f4f3f3;
+    padding: 6px 12px;
+    text-align: right;
+}
+.info{
+    background-color: #c4edf7;
+    padding: 4px 6px;
+}
+
+/*tab*/
+.tabheader{
+ border-bottom: 2px solid black;
+    color: #000000;
+    margin: 12px 0 0;
+    padding: 0 0 0 10px;
+    z-index: 1;
+}
+.tabheader li{
+
+    display: inline;
+    list-style-type: none;
+    overflow: hidden;
+}
+.tabheader a, a.active {
+    background: none repeat scroll 0 0 #898B5E;
+    border: 2px solid black;
+    color: #DEDECF;
+    font: bold 1em "Trebuchet MS",Arial,sans-serif;
+    margin: 0;
+    padding: 2px 5px 0;
+    text-decoration: none;
+}
+.tabheader a.active {
+    background: none repeat scroll 0 0 #ABAD85;
+    border-bottom: 3px solid #ABAD85;
+}
+.tabheader a:hover {
+    background: none repeat scroll 0 0 #ADC09F;
+    color: #FFFFFF;
+}
+.tabheader a.selected {
+    background: none repeat scroll 0 0 #ABAD85;
+}
+.tabheader a.active:hover {
+    background: none repeat scroll 0 0 #ABAD85;
+    color: #DEDECF;
+}

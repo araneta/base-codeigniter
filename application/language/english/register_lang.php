@@ -1,4 +1,6 @@
 <?php
+$lang['login'] = 'Login';
+$lang['register'] = 'Register';
 $lang['firstname'] = 'First Name';
 $lang['lastname'] = 'Last Name';
 $lang['password'] = 'Password';

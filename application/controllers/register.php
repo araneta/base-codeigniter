@@ -3,7 +3,7 @@
 class Register extends MY_Controller {  
 	public function __construct() {
 		parent::__construct();	                				        	
-		$this->lang->load('register',$this->current_lang);
+		$this->set_lang_file('register');
 	}
 	
 	function loadCaptcha()
@@ -22,7 +22,7 @@ class Register extends MY_Controller {
 	}
 	function username_check($str)
 	{
-		if($this->MUsers->usernameExists($str))
+		if($this->MUser->usernameExists($str))
 		{
 			$this->form_validation->set_message('username_check',$this->lang->line('usernameexists'));
 			return FALSE;
@@ -31,7 +31,7 @@ class Register extends MY_Controller {
 	}
 	function email_check($str)
 	{
-		if($this->MUsers->emailExists($str))
+		if($this->MUser->emailExists($str))
 		{
 			$this->form_validation->set_message('email_check',$this->lang->line('emailexists'));
 			return FALSE;
@@ -41,22 +41,19 @@ class Register extends MY_Controller {
 	
 	function submitValidate()
 	{
-		$this->load->model('user/MUsers');
+		
 		$this->form_validation->set_rules('username', 'lang:username', 'required|alpha_numeric|min_length[6]|max_length[256]');
 		$this->form_validation->set_rules('username', 'lang:username', 'callback_username_check');
 		$this->form_validation->set_rules('password', 'lang:password', 'required');
 		$this->form_validation->set_rules('email', 'lang:email', 'required|valid_email');
 		$this->form_validation->set_rules('email', 'lang:email', 'callback_email_check');
-		$this->form_validation->set_rules('firstname', 'lang:firstname', 'required');
-		$this->form_validation->set_rules('lastname', 'lang:lastname', 'required');
-		$this->form_validation->set_rules('sex', 'lang:sex', 'required');
-		$this->form_validation->set_rules('month', 'lang:month', 'required|datebirth');
 		$this->form_validation->set_rules('recaptcha_challenge_field', 'lang:Recaptcha', 'required|recaptcha_matches');
 		return ($this->form_validation->run());
 	}
 	
 	function create()
-	{		
+	{	
+		$this->load->model('user/MUser');	
 		$this->loadCaptcha();				
 		if($this->submitValidate()==FALSE)
 		{
@@ -65,7 +62,7 @@ class Register extends MY_Controller {
 		}
 		else         
 		{						
-			$this->MUsers->createUser();					
+			$this->MUser->save($this->bind($this->MUser));					
 			$this->session->set_flashdata('message',$this->lang->line('successregister'));
 			redirect('login','refresh');
 		}		

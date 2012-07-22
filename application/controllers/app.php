@@ -5,7 +5,7 @@ class App extends MY_Controller {
 		parent::__construct();	                				        	
 	}
 	public function index(){			
-        $this->load->view('home/index', $this->data);  
+        $this->load->view('home', $this->data);  
 	}
 }
 ?>

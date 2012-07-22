@@ -7,36 +7,14 @@
 		<div class="nav-wrapper">			
 			<div class="nav">
 				<ul id="navigation" >
- 					<li class="<?php if(isset($page) && $page=='myquiz')echo 'active';?>">
-						<a href="<?= base_url();?>quiz/listquiz" target="_self">
+ 					<li class="<?php if(isset($page) && $page=='home')echo 'active';?>">
+						<a href="<?= base_url();?>" target="_self">
 							<span class="menu-left"></span>
-							<span class="menu-mid">My Quiz</span>
+							<span class="menu-mid">Home</span>
 							<span class="menu-right"></span>
 						</a>
 					</li>					 
-					<li class="<?php if(isset($page) &&$page=='addquiz')echo 'active';?>">
-						<a href="<?= base_url();?>quiz/listquiz" target="_self">
-							<span class="menu-left"></span>
-							<span class="menu-mid">Create a Quiz</span>
-							<span class="menu-right"></span>
-						</a>	            	   	
-					</li>
- 
-					<li class="#">
-						<a href="<?= base_url();?>user/listquestion" target="_self">
-							<span class="menu-left"></span>
-							<span class="menu-mid">Take Quizzes</span>
-							<span class="menu-right"></span>
-						</a>
-					</li>
- 
-					<li class="#">
-						<a href="<?= base_url();?>user/listquestion" target="_self">
-							<span class="menu-left"></span>
-							<span class="menu-mid">Sell</span>
-							<span class="menu-right"></span>
-						</a>
-					</li>					
+										
 			   	</ul>
 			   	<ul style="float:right">
 			   		<li class="#">

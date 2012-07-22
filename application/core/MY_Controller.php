@@ -1,21 +1,37 @@
 <?php
 if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 class MY_Controller extends CI_Controller {
-	protected $subdomain_info;
-	protected $current_lang;
-	protected $data = array();
+	//current language: english, indonesia,..
+	protected $m_current_lang;
+	//data to be passed to view
+	protected $m_data = array();
 	
     function __construct()
     {
         parent::__construct();
-		session_start();	
-		if(empty($_SESSION['language']))
+		if(!$this->session->userdata('language'))
 		{
-			$_SESSION['language'] = 'english';
+			$this->session->set_userdata('language','english');
 		}
-		$this->current_lang = $_SESSION['language'];		
-			
+		$this->m_current_lang = $this->session->userdata('language');		
 		
     }
+	function bind($model){
+		$data = array();
+		foreach($model->cols as $col){
+			$data[$col] = db_clean($this->input->post($col));
+		}
+		return $data;
+	}
+	function set_lang_file($file){
+		$this->lang->load($file,$this->m_current_lang);
+	}
+	function need_login(){
+		if (!$this->session->userdata('userid')){
+			redirect('login','refresh');
+			//return;
+		}
+	}
+
 }
 ?>

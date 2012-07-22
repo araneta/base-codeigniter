@@ -1,42 +1,41 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class Login extends MY_Controller {  
+	
 	public function __construct() {
-		parent::__construct();	                				        	
-		$this->lang->load('login',$this->current_lang);
-	}
-	public function index(){	
-		$this->data['main'] = 'login';
-        $this->load->view('page/index', $this->data);  
-	}
-	function verify(){
-		$this->load->library('form_validation');
-		$this->form_validation->set_rules('username', $this->lang->line('username'), 'required');
-		$this->form_validation->set_rules('password', $this->lang->line('password'), 'required');
-		if ($this->form_validation->run() == FALSE)
-		{
-			$this->index();
+		parent::__construct();	         
+		$this->set_lang_file('login');		
+		if ($this->session->userdata('userid')){
+			redirect('user/dashboard','refresh');
+			//return;
 		}
-		else
-		{
-			$this->load->model('MUser');
-			if ($this->input->post('username')){
-				$u = $this->input->post('username');
-				$pw = $this->input->post('password');
-				$this->MUser->Verify($u,$pw);
-				if (!empty($_SESSION['userid'])&&$_SESSION['userid'] > 0){
-					redirect('user/dashboard','refresh');
-					return;
-				}else
-				{
-					$this->session->set_flashdata('message',$this->lang->line('wronglogin'));
-				}
+	}
+	public function index() {		
+		$this->load->model('MLanguages');
+		$data['title'] = $this->lang->line('login');		
+		$data['main'] = 'login';		
+		$data['langs'] = $this->MLanguages->get_all();		
+		$this->load->view('template',$data);		
+	}
+
+	public function verify() 
+	{
+		$this->load->model('user/MLogin');
+		if ($this->input->post('username')){
+			$u = $this->input->post('username');
+			$pw = $this->input->post('password');
+			if($this->MLogin->verifyUser($u,$pw)){
+				redirect('user/dashboard','refresh');
+				return;
 			}else
 			{
 				$this->session->set_flashdata('message',$this->lang->line('wronglogin'));
 			}
-			redirect('login','refresh');	
+		}else
+		{
+			$this->session->set_flashdata('message',$this->lang->line('wronglogin'));
 		}
+		redirect('login','refresh');	
 	}
 }
 ?>

@@ -1,0 +1,220 @@
+/* default css */
+body{	
+	font-family: "lucida grande",tahoma,verdana,arial,sans-serif;	
+	margin:0 auto;
+	padding:0;
+        background: url("../images/bg.jpg") no-repeat scroll center top #310B28;
+        color: #0E4354;
+}
+#wrapper{
+	width:900px;
+	margin:0 auto;
+	padding:0;		
+}
+#nav{
+	float:left;
+	width:135px;
+	height:auto;
+}
+#main{		
+	height:auto;
+	font-size: 14px;	
+	margin-left: auto ;
+  	margin-right: auto ;
+         
+  	width:700px;	  	
+}
+.maincontent{
+    background-color: #fff;    
+    margin:0 auto;
+    padding:0;	
+    width:900px;
+    display:table;
+}
+#ad{
+	float:right;
+	width:0px;
+	margin-right:10px;
+	background-color:#f2f2f2;	
+}
+#header{
+	font-size:12px;
+
+}
+#footer{
+	clear:both;	
+	font-size:9px;
+        color:#A8549B;
+        text-align: center;        
+}
+.footercontent{
+    
+        background: url("../images/footer_bg.jpg") no-repeat scroll center top transparent;
+        height: 87px;
+        width: 900px;
+}
+.copyright{
+    color:#fff;
+    margin:10px 0px;
+    font-size: 9px;
+    text-align: center;
+}
+.title{
+    font-size:20px; 
+}
+
+tr.odd { 
+    background-color: #EDF5FF;
+}
+tr.even { 
+    background-color: #FFF;
+}
+th{    
+    font-weight: bold;
+}
+.error p{
+	 line-height: 4px;
+}
+.error
+{
+	background-color: #F59587;
+	background: url("../images/error.png") no-repeat scroll 15px 10px #F59587;
+    border: 1px solid #D0D0D0;
+    color: #002166;    
+    margin: 8px 0;    
+    padding: 10px 20px 10px 60px;
+	width:80%;
+	font-weight:bold;
+}
+.message
+{
+    background: url("../images/valid.png") no-repeat scroll 15px 10px #EDFCE9;
+    border: 1px solid #CCEAC4;
+    clear: both;
+    margin: 0 auto 20px;
+    padding: 20px 20px 15px 60px;
+    width: 80%;
+	font-weight:bold;
+}
+a, a:link, a:hover{
+    cursor: pointer;
+    text-decoration: none;
+    color: #000;
+}
+/*jqueryui*/
+.ui-icon {
+    width:18px;
+    height: 18px;
+}
+.ui-datepicker-calendar tr{
+	font-size:12px;
+}
+.ui-button-text
+{
+	font-size:12px;
+        margin-left:6px;
+}
+.ui-button .ui-icon.fw-button-add {
+    background-image: url(../images/add.png);
+}
+.ui-button .ui-icon.fw-button-cancel {
+    background-image: url(../images/back.png);
+}
+.ui-button .ui-icon.fw-button-save {
+    background-image: url(../images/save.png);
+}
+#flex1 tr{
+    font-size: 12px;
+}
+label{
+    /*font-weight: bold;*/
+}
+input[type=text]{
+    font-size: 12px;
+}
+.dlglabel{
+    font-size: 12px;
+}
+.clear {
+    clear: both;
+}
+.validateTips {font-size: 12px; border: 1px solid transparent; padding: 0.3em; }
+/*form*/
+fieldset {
+    border: medium none;
+    clear: both;
+}
+label {
+    color: #666666;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+dt {
+    
+}
+a.forgot_pass {
+    background: url("../images/help.png") no-repeat scroll left center transparent;
+    color: #256C89;
+    display: block;
+    float: right;
+    margin: 15px 20px 0 0;
+    padding: 0 0 0 18px;
+    text-decoration: none;
+}
+
+/*login*/
+#signin_form{
+    width:600px;
+    height: 250px;
+    margin: 20px 0 0 50px;
+    padding: 0 0 0 0;
+    background: url("../images/login_bg.png") no-repeat scroll center top transparent;
+    float: left;
+}
+#signin_form h3{
+    color: #256C89;
+    float: left;
+    font-size: 18px;
+    font-weight: normal;
+    margin: 0;
+    padding: 15px 0 5px 20px;
+}
+/*language*/
+.lang{
+    width:500px;
+    margin:0px auto;
+}
+
+.lang  a{
+    color:#fff;
+}
+/*flexi*/
+.hDivBox th{
+  font-size:1.4em;
+  font-weight:bold !important;  
+  
+}
+/*breadcrumb*/
+.breadcrumb{
+    border-bottom:thin solid #EFEFEF;
+    height: 100px;
+}
+.breadcrumb li{
+    display:inline;
+    margin:0 0.4em;
+}
+#breadcrumb{
+    background-color: #fff;    
+}
+ul.breadcrumb{
+    list-style:none outside none;
+    margin:0;
+}
+.nav ul{
+    height: 50px !important;
+}
+ul.breadcrumb li a{
+    color:#000;
+    font-size: 0.9em;
+}

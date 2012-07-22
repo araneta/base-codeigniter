@@ -4,6 +4,7 @@ $lang['password'] = 'Password';
 $lang['username'] = 'Username';
 $lang['logintitle'] = 'User Login';
 $lang['wronglogin'] = 'Wrong username or password';
+$lang['register'] = 'Register';
 //validation
 
 $lang['required'] 			= "%s harus diisi.";
@@ -27,6 +28,6 @@ $lang['is_natural_no_zero']	= "The %s field must contain a number greater than z
 $lang['usernameexists'] = 'Username already exists';
 $lang['emailexists'] = 'Email already exists';
 $lang['invaliddate']		="%s is not valid date";
-$lang['forgotlink'] = 'forgot password';
+$lang['forgot'] = 'forgot password';
 
 ?>

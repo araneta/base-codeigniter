@@ -1,4 +1,7 @@
 <?php
+$lang['login'] = 'Login';
+$lang['register'] = 'Register';
+$lang['email'] = 'Email';
 $lang['forgot'] = "Forgot Password";
 $lang['forgottitle'] = "Forgot Password";
 $lang['send'] = "Send";

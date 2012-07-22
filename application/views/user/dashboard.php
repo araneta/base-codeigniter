@@ -11,21 +11,13 @@
 		var base_url = '<?= base_url();?>';
 		//]]>
 	</script>
-	<script type="text/javascript" src="<?php echo base_url();?>js/jquery-1.4.4.min.js"></script>
-	<script type="text/javascript" src="<?php echo base_url();?>js/jquery-ui-1.8.16.custom.min.js"></script>
-        <?php
-        if(isset($jslang))
-        {
-        ?>
-        <script type="text/javascript" src="<?php echo base_url();?>javalang/f/<?php echo $jslang; ?>"></script>
+	
 	<?php
-        }
 	if (isset($cssfiles) && count($cssfiles)){		
 		foreach ($cssfiles as $css){
 			echo "<link href=\"". base_url(). "css/$css\" rel=\"stylesheet\" type=\"text/css\" />\r\n";			
 		}		
 	} 
-	
 	?>	
 </head>
 <body>
@@ -45,7 +37,14 @@
 			<?php $this->load->view("user/user_footer");?>
 		</div>
 	</div>
+	<script type="text/javascript" src="<?php echo base_url();?>js/jquery-1.4.4.min.js"></script>
 	<?php
+	if(isset($jslang))
+	{
+	?>
+		<script type="text/javascript" src="<?php echo base_url();?>javalang/f/<?php echo $jslang; ?>"></script>
+	<?php
+	}
 	if (isset($jsfiles) && count($jsfiles)){		
 		foreach ($jsfiles as $js){
 			echo "<script type=\"text/javascript\" src=\"".base_url()."js/$js\"></script>\r\n";			

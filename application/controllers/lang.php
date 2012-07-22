@@ -1,23 +1,14 @@
 <?php
-class Lang extends Controller {
-
-	public function Lang() {
-		parent::Controller();	
-		session_start();
-		if(!empty($_SESSION['language']))
-			$lang = $_SESSION['language'];
-		else
-		{
-			$lang = $this->config->item('language');
-			$_SESSION['language'] = $lang;
-		}
-		//$this->lang->load('login', $lang);
+class Lang extends MY_Controller {
+	function __construct()
+	{
+		parent::__construct();
 		//$this->lang->load('form_validation', $lang);	
 	}
 	public function change($name)
 	{
-		$_SESSION['language'] = $name;
-		$this->session->set_flashdata('message','you are using '.$_SESSION['language']);
+		$this->session->set_userdata('language',$name);
+		$this->session->set_flashdata('message','you are using '.$this->session->userdata('language'));
 		redirect('login','refresh');
 	}
 }

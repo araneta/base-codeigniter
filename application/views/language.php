@@ -1,9 +1,9 @@
 <div class="lang">
 <?php
 if (isset($langs)){	
-	foreach ($langs as $idtlanguage => $name){
+	foreach ($langs as $lang){
 		echo "&nbsp;";
-		echo anchor("lang/change/$name",$name);
+		echo anchor("lang/change/".$lang['name'],$lang['name']);
 		echo "&nbsp;";
 	}	
 }
