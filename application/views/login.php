@@ -8,7 +8,7 @@
 ?>
 <div id="signin_form">
 	<h3><?php echo $this->lang->line('logintitle');?></h3>
-        <?php echo anchor('forgot',$this->lang->line('forgot'),'class="forgot_pass"')?> 
+        <a href="<?php echo base_url();?>register" class="register"><?php echo $this->lang->line('register');?></a><?php echo anchor('forgot',$this->lang->line('forgot'),'class="forgot_pass"')?> 
 	<?php echo form_open('login/verify'); ?>
         <fieldset>	            
             <label for="username"><?php echo $this->lang->line('username');?></label>

@@ -162,7 +162,15 @@ a.forgot_pass {
     padding: 0 0 0 18px;
     text-decoration: none;
 }
-
+a.register {
+    /*background: url("../images/help.png") no-repeat scroll left center transparent;*/
+    color: #256C89;
+    display: block;
+    float: right;
+    margin: 15px 20px 0 0;
+    padding: 0 0 0 18px;
+    text-decoration: none;
+}
 /*login*/
 #signin_form{
     width:600px;
