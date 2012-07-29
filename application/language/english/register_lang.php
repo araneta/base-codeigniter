@@ -55,4 +55,5 @@ $lang['usernameexists'] = 'Username already exists';
 $lang['emailexists'] = 'Email already exists';
 $lang['invaliddate']		="%s is not valid date";
 $lang['forgotlink'] = 'forgot password';
+$lang['passmissmatch'] = 'The Password field does not match the password confirmation field';
 ?>
