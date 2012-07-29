@@ -12,10 +12,10 @@ class Login extends MY_Controller {
 	}
 	public function index() {		
 		$this->load->model('MLanguages');
-		$data['title'] = $this->lang->line('login');		
-		$data['main'] = 'login';		
-		$data['langs'] = $this->MLanguages->get_all();		
-		$this->load->view('template',$data);		
+		$this->data['title'] = $this->lang->line('login');		
+		$this->data['main'] = 'login';		
+		$this->data['langs'] = $this->MLanguages->get_all();		
+		$this->load->view('template',$this->data);		
 	}
 
 	public function verify() 
