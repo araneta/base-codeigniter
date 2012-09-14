@@ -4,11 +4,7 @@ class Login extends MY_Controller {
 	
 	public function __construct() {
 		parent::__construct();	         
-		$this->set_lang_file('login');		
-		if ($this->session->userdata('userid')){
-			redirect('user/dashboard','refresh');
-			//return;
-		}
+		$this->set_lang_file('login');				
 	}
 	public function index() {		
 		$this->load->model('MLanguages');
@@ -24,16 +20,16 @@ class Login extends MY_Controller {
 		if ($this->input->post('username')){
 			$u = $this->input->post('username');
 			$pw = $this->input->post('password');
-			if($this->MLogin->verifyUser($u,$pw)){
-				redirect('user/dashboard','refresh');
+			if($this->MLogin->verifyUser($u,$pw)){				
+				redirect('user/dashboard');
 				return;
 			}else
 			{
-				$this->session->set_flashdata('message',$this->lang->line('wronglogin'));
+				$this->session->set_flashdata('info',$this->lang->line('wronglogin'));
 			}
 		}else
 		{
-			$this->session->set_flashdata('message',$this->lang->line('wronglogin'));
+			$this->session->set_flashdata('info',$this->lang->line('wronglogin'));
 		}
 		redirect('login','refresh');	
 	}

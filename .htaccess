@@ -1,6 +1,6 @@
 # BEGIN Compress text files
 <ifModule mod_deflate.c>
-  AddOutputFilterByType DEFLATE text/html text/plain text/xml application/xml application/xhtml+xml text/css text/javascript application/javascript application/x-javascript
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml application/xhtml+xml text/css text/javascript application/javascript application/x-javascript
 </ifModule>
 # END Compress text files
 

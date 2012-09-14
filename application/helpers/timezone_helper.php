@@ -2,10 +2,10 @@
 
 if (! function_exists('get_tz_options'))
 {
-    function get_tz_options($selectedzone, $label, $desc = '')
+    function get_tz_options($name,$selectedzone, $desc = '')
     {
       //echo '<div class="label"><label for="edited_user_timezone">'.$label.':</label></div>';
-      echo '<div class="input"><select name="edited_user_timezone" id="ddltimezone">';
+      echo '<div class="input"><select name="'.$name.'" id="'.$name.'">';
       function timezonechoice($selectedzone) {
         $all = timezone_identifiers_list();
 
@@ -19,7 +19,7 @@ if (! function_exists('get_tz_options'))
         }
 
         asort($zonen);
-        $structure = '<option value="all">All</option>';
+        $structure = '';
         foreach($zonen AS $zone) {
           extract($zone);
           if($continent == 'Africa' || $continent == 'America' || $continent == 'Antarctica' || $continent == 'Arctic' || $continent == 'Asia' || $continent == 'Atlantic' || $continent == 'Australia' || $continent == 'Europe' || $continent == 'Indian' || $continent == 'Pacific') {

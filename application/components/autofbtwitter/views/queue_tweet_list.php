@@ -1,0 +1,1 @@
+<div class="btn_add_akun">    <?php echo anchor('tweetqueue/add','<strong>Add Queue</strong>','class="bt_twitter"'); ?></div><div style="clear:both"></div>	<?phpecho $table;?>

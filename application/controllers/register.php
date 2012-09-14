@@ -94,7 +94,7 @@ class Register extends MY_Controller {
 		else         
 		{						
 			$this->MUser->save($this->bind($this->MUser));					
-			$this->session->set_flashdata('message',$this->lang->line('successregister'));
+			$this->session->set_flashdata('info',$this->lang->line('successregister'));
 			redirect('login','refresh');
 		}		
 	}

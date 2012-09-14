@@ -21,10 +21,10 @@ class MUser extends MY_Model
 		$bcrypt = new Bcrypt(15);
 		$hash = $bcrypt->hash('password');
 		$user['password'] = $bcrypt->hash($user['password']);
+		date_default_timezone_set('UTC'); // make this match the server timezone		
 		$now = gmdate("Y-m-d\TH:i:s\Z");
 		//if create new user
-		if(empty($user['id'])){
-			date_default_timezone_set('UTC'); // make this match the server timezone		
+		if(empty($user['id'])){			
 			
 			$user['created_date'] = $now;
 			$user['last_login'] = $now;

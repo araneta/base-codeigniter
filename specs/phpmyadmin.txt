@@ -1,0 +1,6 @@
+phpMyAdmin 3.4 added.  Please make note of these MySQL credentials again:
+
+   Root User: admin
+   Root Password: d4jBLW_2Mmvk
+
+URL: https://fbtwitterbot-ajgile.rhcloud.com/phpmyadmin/

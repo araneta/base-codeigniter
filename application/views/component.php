@@ -1,4 +1,1 @@
-<?php
-	if(isset($buffer))
-		echo $buffer;	
-?>
+<?php if(isset($buffer))echo $buffer;?>

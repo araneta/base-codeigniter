@@ -1,4 +1,4 @@
-<div class="lang">
+<div class="left_footer_login">
 <?php
 if (isset($langs)){	
 	foreach ($langs as $lang){

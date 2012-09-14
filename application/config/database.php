@@ -52,6 +52,12 @@ $db['default']['hostname'] = 'localhost';
 $db['default']['username'] = 'root';
 $db['default']['password'] = '';
 $db['default']['database'] = 'fbtwitter';
+/*
+$db['default']['hostname'] = '127.10.224.129';
+$db['default']['username'] = 'admin';
+$db['default']['password'] = 'd4jBLW_2Mmvk';
+$db['default']['database'] = 'fbtwitterbot';
+*/
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;
@@ -63,7 +69,8 @@ $db['default']['dbcollat'] = 'utf8_general_ci';
 $db['default']['swap_pre'] = '';
 $db['default']['autoinit'] = TRUE;
 $db['default']['stricton'] = FALSE;
-
-
 /* End of file database.php */
 /* Location: ./application/config/database.php */
+?>
+
+

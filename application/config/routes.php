@@ -38,9 +38,15 @@
 |
 */
 
-$route['default_controller'] = "login";
+$route['default_controller'] = "user/Dashboard";
 $route['404_override'] = '';
 
-
+$route['tweeteditor/(:any)'] = 'comp/autofbtwitter/tweeteditor/$1';
+$route['accounts/(:any)'] = 'comp/autofbtwitter/accounts/$1';
+$route['tweetscheduler/(:any)'] = 'comp/autofbtwitter/tweetscheduler/$1';
+$route['tweetqueue/(:any)'] = 'comp/autofbtwitter/tweetqueue/$1';
+$route['tweetmessage/(:any)'] = 'comp/autofbtwitter/tweetmessage/$1';
+//$route['tweetmessage'] = 'comp/autofbtwitter/tweetmessage/index';
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */
+?>

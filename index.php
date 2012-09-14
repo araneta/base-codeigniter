@@ -1,5 +1,6 @@
 <?php
-
+header("Expires: Thu, 19 Nov 1981 08:52:00 GMT");
+header("Cache-Control: no-store, no-cache, must-revalidate");
 /*
  *---------------------------------------------------------------
  * APPLICATION ENVIRONMENT
@@ -200,6 +201,5 @@ if (defined('ENVIRONMENT'))
  *
  */
 require_once BASEPATH.'core/CodeIgniter.php';
-
 /* End of file index.php */
 /* Location: ./index.php */

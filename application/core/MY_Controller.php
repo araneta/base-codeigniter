@@ -26,10 +26,10 @@ class MY_Controller extends CI_Controller {
 	function set_lang_file($file){
 		$this->lang->load($file,$this->m_current_lang);
 	}
-	function need_login(){
-		if (!$this->session->userdata('userid')){
+	function need_login(){		
+		if ($this->session->userdata('userid')==FALSE){			
 			redirect('login','refresh');
-			//return;
+			return;
 		}
 	}
 
