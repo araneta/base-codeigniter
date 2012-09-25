@@ -81,13 +81,14 @@ class MY_Model extends CI_Model {
 	function save(&$rawmodel){
 		$model = array();
 		foreach($this->cols as $col){
-			$model[$col] = $rawmodel[$col];
+			if(isset($rawmodel[$col]))
+				$model[$col] = $rawmodel[$col];
 		}
 		if(!empty($model['id'])){
 			$this->db->update($this->m_table, $model,array('id' => $model['id']));	
 		}else{
 			$this->db->insert($this->m_table, $model);	
-			$model['id'] = $this->db->insert_id();
+			$rawmodel['id'] = $this->db->insert_id();
 		}	
 		
 		if ($this->db->affected_rows() == '1')
